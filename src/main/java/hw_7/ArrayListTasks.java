@@ -1,7 +1,9 @@
 package hw_7;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /*
 Задача 1:
@@ -27,16 +29,16 @@ public class ArrayListTasks {
         printEvenNumbers(new ArrayList<>(Arrays.asList(2, 5, 7, 13, 6, 9, 10)));
         printLongestString(new ArrayList<>(Arrays.asList("apple", "pear", "banana")));
         sumOfAllNumbers(new ArrayList<>(Arrays.asList(12, 24, 36, 100)));
-        maxOfArrayList(new ArrayList<>(Arrays.asList(-15, 10, 100, 1000000)));
+        maxOfArrayList(new ArrayList<>(List.of(-18, 20, 100, 500)));
 
     }
 
-    public static void printArrayList(ArrayList<Integer> arrayList) {
+    public static void printArrayList(List<Integer> arrayList) {
         arrayList.add(5);
         System.out.println(arrayList);
     }
 
-    public static void printEvenNumbers(ArrayList<Integer> arrayList) {
+    public static void printEvenNumbers(List<Integer> arrayList) {
         if (!arrayList.isEmpty()) {
             for (int num : arrayList) {
                 if (num % 2 == 0) {
@@ -47,7 +49,7 @@ public class ArrayListTasks {
         }
     }
 
-    public static void printLongestString(ArrayList<String> strings) {
+    public static void printLongestString(List<String> strings) {
         int maxLength = 0;
         String longest = "";
 
@@ -61,7 +63,7 @@ public class ArrayListTasks {
         System.out.println(longest);
     }
 
-    public static void sumOfAllNumbers(ArrayList<Integer> numbers) {
+    public static void sumOfAllNumbers(List<Integer> numbers) {
         int sum = 0;
         for (int num : numbers) {
             sum += num;
@@ -70,15 +72,19 @@ public class ArrayListTasks {
         System.out.println(sum);
     }
 
-    public static void maxOfArrayList(ArrayList<Integer> numbers) {
-        int max = numbers.get(0);
+    public static void maxOfArrayList(List<Integer> numbers) {
+        if (!numbers.isEmpty()) {
+            int max = numbers.get(0);
 
-        for (int num : numbers) {
-            if (num > max) {
-                max = num;
+            for (int num : numbers) {
+                if (num > max) {
+                    max = num;
+                }
             }
-        }
 
-        System.out.println(max);
+            System.out.println(max);
+        } else {
+            System.out.println("Array cannot be empty");
+        }
     }
 }

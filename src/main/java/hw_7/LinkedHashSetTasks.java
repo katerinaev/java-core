@@ -12,6 +12,7 @@ public class LinkedHashSetTasks {
         strings.add("Second");
         strings.add("Third");
         strings.add("Forth");
+        strings.add("Fifth");
 
         System.out.println(strings);
 

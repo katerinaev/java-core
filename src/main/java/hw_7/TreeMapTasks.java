@@ -30,8 +30,8 @@ public class TreeMapTasks {
         System.out.println();
 
         // Task 2
-        System.out.println("Max key is: " + scores.firstKey());
-        System.out.println("Min key is: " + scores.lastKey());
+        System.out.println("Min key is: " + scores.firstKey());
+        System.out.println("Max key is: " + scores.lastKey());
         System.out.println();
 
         // Task 3

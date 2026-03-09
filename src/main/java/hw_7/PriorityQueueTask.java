@@ -13,7 +13,6 @@ public class PriorityQueueTask {
         priorityQueue.offer(15);
         priorityQueue.add(5);
         priorityQueue.add(1);
-        System.out.println(priorityQueue);
 
         while (!priorityQueue.isEmpty()) {
             System.out.println(priorityQueue.poll());

@@ -13,6 +13,7 @@ public class LinkedListTasks {
         list1.add("Monday");
         list1.add("Tuesday");
         list1.add("Wednesday");
+        list1.add("Thursday");
         System.out.println("All elements of list1: " + list1);
 
 // Задача 2:  Реализуйте очередь задач с LinkedList. Добавьте 3 задачи и

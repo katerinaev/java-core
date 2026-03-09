@@ -34,8 +34,11 @@ public class HashMapTasks {
         people.put("Julia", 18);
         people.put("Victor", 35);
         people.put("Kate", 28);
+        printUnderEighteen(people);
+    }
 
-        for (Map.Entry<String, Integer> entry : people.entrySet()) {
+    public static void printUnderEighteen(HashMap <String, Integer> hashMap) {
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
             if (entry.getValue() < 18) {
                 System.out.println(entry.getKey() + " is not 18 yet.");
             }
