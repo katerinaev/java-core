@@ -9,7 +9,7 @@ package hw_8.exceptions.task_2;
 public class DivisionOfNumbers {
     public static void  divideNumbers(int x, int y) {
         try {
-            double result = x / y;
+            double result = (double) x / y;
             System.out.println(result);
         } catch (ArithmeticException e) {
             System.out.println("Can't divide by zero " + e.getMessage());
@@ -17,6 +17,6 @@ public class DivisionOfNumbers {
     }
 
     public static void main(String[] args) {
-        divideNumbers(35, 0);
+        divideNumbers(35, 2);
     }
 }

@@ -10,7 +10,7 @@ package hw_8.exceptions.task_3;
 public class AgeCheck {
     public static void checkAge(int age) throws InvalidAgeException {
         if (age < 0 || age > 150) {
-            throw new InvalidAgeException("Age " + age + " is noy valid. It must be between 0 and 150");
+            throw new InvalidAgeException("Age " + age + " is not valid. It must be between 0 and 150");
         }
         System.out.println("Age is: " + age);
     }

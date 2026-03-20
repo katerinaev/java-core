@@ -13,7 +13,10 @@ import java.util.List;
  */
 public class NumberBox<T extends Number>  {
     private List<T> list;
-    public static <T extends Number> double getSum(List<T> list) {
+    public NumberBox(List<T> list) {
+        this.list = list;
+    }
+    public double getSum() {
         double sum = 0;
         if (!list.isEmpty()) {
             for (T elem : list) {
@@ -24,10 +27,10 @@ public class NumberBox<T extends Number>  {
     }
 
     public static void main(String[] args) {
-        List<Integer> intList = List.of(1, 2, 3, 4, 5);
-        System.out.println("Sum of integer: " +getSum(intList));
+        NumberBox<Integer> intBox = new NumberBox<>(List.of(1, 2, 3, 4, 5));
+        System.out.println("Sum of integer: " + intBox.getSum());
 
-        List<Double> doubleList = List.of(3.15, 5.20, 10.12);
-        System.out.println("Sum of double: " +getSum(doubleList));
+        NumberBox<Double> doubeBox = new NumberBox<>(List.of(3.15, 5.20, 10.12));
+        System.out.println("Sum of double: " + doubeBox.getSum());
     }
 }

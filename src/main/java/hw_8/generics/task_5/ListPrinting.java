@@ -12,10 +12,8 @@ import java.util.List;
  */
 public class ListPrinting {
     public static <T> void printList(List<T> list) {
-        if (!list.isEmpty()) {
-            for (T elem : list) {
-                System.out.println(elem);
-            }
+        for (T elem : list) {
+            System.out.println(elem);
         }
     }
 

@@ -17,6 +17,10 @@ import java.util.regex.Pattern;
  */
 public class EmailValidation {
     public static void checkEmail(String email) {
+        if (email == null) {
+            throw new InvalidEmailException("Email must not be null");
+        }
+
         String regex = "^[\\w-\\.]+@[\\w-]+(\\.[\\w-]+)*\\.[a-z]{2,}$";
 
         Pattern pattern = Pattern.compile(regex);
