@@ -18,7 +18,7 @@ public class Rectangle {
         return this.width;
     }
 
-    public int getHteight() {
+    public int getHeight() {
         return this.height;
     }
 

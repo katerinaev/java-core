@@ -22,7 +22,7 @@ public class Main {
 
         int min = numbers.stream()
                 .min(Comparator.naturalOrder())
-                .get();
+                .orElseThrow();
 
         System.out.println(min);
     }

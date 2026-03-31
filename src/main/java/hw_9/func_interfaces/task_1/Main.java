@@ -15,7 +15,7 @@ interface MathOperation { double operate(double a, double b); }
 public class Main {
     public static void main(String[] args) {
         MathOperation addition = (a, b) -> a + b;
-        MathOperation subtruction = (a, b) -> a - b;
+        MathOperation subtraction = (a, b) -> a - b;
         MathOperation multiplication = (a, b) -> a * b;
         MathOperation division = (a, b) -> {
             if (b == 0) {
@@ -25,7 +25,7 @@ public class Main {
         };
 
         System.out.println(addition.operate(5, 5));
-        System.out.println(subtruction.operate(5, 5));
+        System.out.println(subtraction.operate(5, 5));
         System.out.println(multiplication.operate(5, 5));
         System.out.println(division.operate(15, 2));
     }

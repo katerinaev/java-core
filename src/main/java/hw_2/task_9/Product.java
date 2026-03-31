@@ -26,8 +26,8 @@ public class Product {
         this.price = price;
     }
 
-    public double applyDiscount(double discount) {
-        return price -= price * discount / 100;
+    public void applyDiscount(double discount) {
+        price -= price * discount / 100;
     }
 
     public void printInfo() {

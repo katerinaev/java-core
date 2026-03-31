@@ -20,7 +20,7 @@ public class Main {
         List<Integer> numbers = Arrays.asList(500, 200, 155, -155);
 
         int max = numbers.stream()
-                .mapToInt(n -> n)
+                .mapToInt(Integer::intValue)
                 .max()
                 .orElseThrow(() -> new IllegalArgumentException("List is empty"));
 

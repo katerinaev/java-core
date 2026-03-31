@@ -31,7 +31,7 @@ public class Teacher {
     }
 
     public void printInfo() {
-        System.out.println("Teacher " + name + " teaches " + subject);
+        System.out.println("Teacher: " + name + ", subject: " + subject);
     }
 
     public static void main(String[] args) {

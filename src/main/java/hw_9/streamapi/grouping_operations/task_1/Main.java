@@ -20,8 +20,8 @@ public class Main {
     public static void main(String[] args) {
         List<String> numbers = Arrays.asList("One", "Two", "Three", "Four", "Five");
 
-        Map<String, List<String>> groupedNumbers = numbers.stream()
-                .collect(Collectors.groupingBy(n -> n.substring(0,1)));
+        Map<Character, List<String>> groupedNumbers = numbers.stream()
+                .collect(Collectors.groupingBy(n -> n.charAt(0)));
 
         System.out.println(groupedNumbers);
     }
