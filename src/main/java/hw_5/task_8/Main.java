@@ -1,13 +1,13 @@
 package hw_5.task_8;
 /*
-8. Музей
-Условие:
-В музее выставлен экспонат.
-У каждого экспоната своя история и условия хранения.
-Примеры:
-Манускрипт — требует контролируемой влажности
-Скульптура — нуждается в реставрации
-Нужно создать систему, которая управляет экспонатом и предоставляет информацию о нём.
+8. Museum
+Requirement:
+An exhibit is on display in a museum.
+Each exhibit has its own history and storage conditions.
+Examples:
+Manuscript - requires controlled humidity
+Sculpture - needs restoration
+A system needs to be created that manages the exhibit and provides information about it.
 */
 public class Main {
     public static void main(String[] args) {

@@ -1,12 +1,12 @@
 package hw_5.task_1;
 /*
-1. Зоопарк
-Условие:
-В зоопарке есть одно животное, но оно может быть разным: птица или слон.
-Каждое животное издаёт уникальные звуки и передвигается по-своему.
-Например, слон трубит и ходит, а птица чирикает и летает.
-Нужно спроектировать систему, которая может работать с любым животным,
-добавлять его в зоопарк и демонстрировать его поведение.
+1. Zoo
+Task:
+There is one animal in a zoo, but it can be different: a bird or an elephant.
+Each animal makes unique sounds and moves differently.
+For example, an elephant trumpets and walks, while a bird chirps and flies.
+You need to design a system that can work with any animal,
+add it to the zoo, and demonstrate its behavior.
 */
 public class Main {
     public static void main(String[] args) {

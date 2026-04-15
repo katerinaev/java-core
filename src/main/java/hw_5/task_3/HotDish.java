@@ -4,7 +4,6 @@ public class HotDish extends Dish {
     private int temperature;
 
     public HotDish(int temperature) {
-        super();
         this.temperature = temperature;
     }
 

@@ -1,13 +1,13 @@
 package hw_5.task_5;
 /*
-5. Ферма
-Условие:
-На ферме содержится одно домашнее животное.
-У каждого животного свои функции и нужды.
-Примеры:
-Корова даёт молоко, нуждается в выпасе
-Курица несёт яйца, требует зерно
-Нужно создать систему, которая позволяет управлять животным с учётом его потребностей
+5. Farm
+Requirements:
+The farm contains one domestic animal.
+Each animal has its own functions and needs.
+Examples:
+A cow produces milk and needs to be grazed.
+A chicken lays eggs and requires grain.
+A system must be created that allows for managing the animal according to its needs.
 */
 public class Main {
     public static void main(String[] args) {

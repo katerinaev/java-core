@@ -8,6 +8,9 @@ public class Museum {
     }
 
     public void manageExhibit() {
+        if (exhibit == null) {
+            throw new NullPointerException("There is no exhibit in the Museum");
+        }
         this.exhibit.history();
         this.exhibit.preserve();
     }

@@ -8,6 +8,10 @@ public class Farm {
     }
 
     public void manageAnimal() {
+        if (animal == null) {
+            System.out.println("There's no farm animal on the Farm");
+            return;
+        }
         this.animal.care();
         this.animal.produce();
     }

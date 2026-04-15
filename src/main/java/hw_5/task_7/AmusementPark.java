@@ -8,6 +8,9 @@ public class AmusementPark {
     }
 
     public void manageAttraction() {
+        if (attraction == null) {
+            throw new NullPointerException("There's no attraction in Amusement Park");
+        }
         this.attraction.describe();
         this.attraction.maintain();
     }

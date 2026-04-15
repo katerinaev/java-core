@@ -8,6 +8,10 @@ public class PetManager {
     }
 
     public void interact() {
+        if (pet == null) {
+            System.out.println("There's no pet in the house.");
+            return;
+        }
         this.pet.eat();
         this.pet.act();
     }

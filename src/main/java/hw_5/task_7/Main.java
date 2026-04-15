@@ -1,12 +1,12 @@
 package hw_5.task_7;
 /*
-7. Парк развлечений
-Условие:
-В парке есть аттракцион, каждый из которых предлагает свои ощущения и требует обслуживания.
-Примеры:
-Американские горки — проверка безопасности
-Карусель — техническое обслуживание
-Нужно создать систему, которая управляет аттракционом и выводит информацию для посетителей.
+7. Amusement Park
+Problem:
+The park has rides, each offering its own unique experience and requiring maintenance.
+Examples:
+Roller coaster – safety check
+Carousel – maintenance
+Create a system that controls the ride and displays information to visitors.
  */
 public class Main {
     public static void main(String[] args) {
