@@ -6,7 +6,7 @@ package hw_4.breakcontinuetasks;
  */
 public class ExceptDivisibleByThree {
     public static void main(String[] args) {
-        for (int i = 0; i <= 20; i++) {
+        for (int i = 1; i <= 20; i++) {
             if (i % 3 == 0) {
                 continue;
             }

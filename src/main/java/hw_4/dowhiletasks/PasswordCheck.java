@@ -11,14 +11,14 @@ import java.util.Scanner;
 public class PasswordCheck {
     public static void main(String[] args) {
         String correctPassword = "admin";
-        String enteredtPassword;
+        String enteredPassword;
 
         Scanner scanner = new Scanner(System.in);
 
         do {
             System.out.print("Enter password: ");
-            enteredtPassword = scanner.nextLine();
-        } while (!enteredtPassword.equals(correctPassword));
+            enteredPassword = scanner.nextLine();
+        } while (!enteredPassword.equals(correctPassword));
 
         System.out.println("Access granted!");
     }

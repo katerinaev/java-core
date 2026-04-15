@@ -19,6 +19,10 @@ public class TicketPrice {
         switch(day) {
             case 1, 2, 3, 4, 5 -> price = 300;
             case 6, 7 -> price = 450;
+            default -> {
+                System.out.println("Error: enter number 1 - 7");
+                return;
+            }
         }
 
         System.out.println("Ticket price " + price + " руб.");

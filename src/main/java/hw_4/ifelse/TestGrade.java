@@ -18,6 +18,11 @@ public class TestGrade {
 
         int result = scanner.nextInt();
 
+        if (result < 0 || result > 100) {
+            System.out.println("Test result must be between 0 and 100");
+            return;
+        }
+
         if (result >= 90) {
             System.out.println("Excellent");
         } else if (result >= 75) {

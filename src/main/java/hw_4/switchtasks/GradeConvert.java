@@ -17,6 +17,12 @@ public class GradeConvert {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter grade 0 - 100: ");
         int grade = scanner.nextInt();
+
+        if (grade > 100 || grade < 0) {
+            System.out.println("Grade must be between 0 and 100.");
+            return;
+        }
+
         String letterGrade = "";
 
         if (grade >= 90) {

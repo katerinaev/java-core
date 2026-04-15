@@ -23,6 +23,10 @@ public class WeekDay {
             case 5 -> stringDay = "Friday";
             case 6 -> stringDay = "Saturday";
             case 7 -> stringDay = "Sunday";
+            default -> {
+                System.out.println("Error: enter number from 1 to 7");
+                return;
+            }
         }
 
         System.out.println("Day of week: " + stringDay);

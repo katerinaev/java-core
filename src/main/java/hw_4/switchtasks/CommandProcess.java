@@ -19,6 +19,7 @@ public class CommandProcess {
             case "stop" -> System.out.println("System stopped");
             case "restart" -> System.out.println("System restarted");
             case "status" -> System.out.println("System status");
+            default -> System.out.println("Unknown command. Enter: start, stop, restart or status");
         }
     }
 }
