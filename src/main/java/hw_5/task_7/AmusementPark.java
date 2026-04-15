@@ -1,0 +1,17 @@
+package hw_5.task_7;
+
+public class AmusementPark {
+    private Attraction attraction;
+
+    public void setAttraction(Attraction attraction) {
+        this.attraction = attraction;
+    }
+
+    public void manageAttraction() {
+        if (attraction == null) {
+            throw new NullPointerException("There's no attraction in Amusement Park");
+        }
+        this.attraction.describe();
+        this.attraction.maintain();
+    }
+}
