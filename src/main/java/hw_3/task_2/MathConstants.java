@@ -10,7 +10,7 @@ calculateExponentialGrowth(double initialValue, double rate, double time) —
 расчет по формуле экспоненциального роста: result = initialValue * Math.pow(e, rate*time)
  */
 public class MathConstants {
-    final static double PI = 3.14159;
+    static final double PI = 3.14159;
     static final double E = 2.71828;
 
     static double calculateCircumference(double r) {

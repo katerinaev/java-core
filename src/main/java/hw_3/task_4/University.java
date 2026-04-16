@@ -35,13 +35,13 @@ public class University {
 
     public static void main(String[] args) {
         University ivan = new University(120, "Ivan Klepov");
-        University arty = new University(125, "Artem Yan");
+        University artem = new University(125, "Artem Yan");
         University marina = new University(130, "Marina Ev");
 
         changeUniversityName("Stanford University");
 
         ivan.printStudentInfo();
-        arty.printStudentInfo();
+        artem.printStudentInfo();
         marina.printStudentInfo();
     }
 }
