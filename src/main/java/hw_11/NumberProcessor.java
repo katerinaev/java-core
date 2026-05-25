@@ -36,7 +36,14 @@ public class NumberProcessor {
     // 8. Finding the Second Largest Number in an Array
     // Write tests for the method that finds the second largest number:
     public int findSecondMax(int[] numbers) {
-        return Arrays.stream(numbers).distinct().sorted().skip(numbers.length - 2).findFirst().orElseThrow();
+        if (numbers == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+        int[] uniqueSorted = Arrays.stream(numbers).distinct().sorted().toArray();
+        if (uniqueSorted.length < 2) {
+            throw new IllegalArgumentException("Array must have at least 2 unique elements");
+        }
+        return uniqueSorted[uniqueSorted.length-2];
     }
 
     // 11. Filter a list of numbers (leave only even ones)

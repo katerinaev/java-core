@@ -27,9 +27,10 @@ public class FindSecondMaxTest extends NumberProcessorTest {
      */
     public static Stream<Arguments> arrayToFindSecondMax() {
         return Stream.of(
-                Arguments.of(new int[]{20, 1, 3, 10, 8, 5}, 10),
-                Arguments.of(new int[]{-11, -33, -5, -8, -10, -20}, -8),
-                Arguments.of(new int[] {88, -15}, -15)
+                Arguments.of(new int[] {20, 1, 3, 10, 8, 5}, 10),
+                Arguments.of(new int[] {-11, -33, -5, -8, -10, -20}, -8),
+                Arguments.of(new int[] {88, -15}, -15),
+                Arguments.of(new int[] {1, 2, 2}, 1)
         );
     }
 
@@ -43,7 +44,7 @@ public class FindSecondMaxTest extends NumberProcessorTest {
 
     @Test
     public void userCannotFindSecondMaxInArrayOfSameElement() {
-        assertThrows(NoSuchElementException.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
             numberProcessor.findSecondMax(new int[]{8, 8, 8, 8, 8});
         }, "Same numbers in array!");
     }
@@ -60,5 +61,10 @@ public class FindSecondMaxTest extends NumberProcessorTest {
         assertThrows(IllegalArgumentException.class, () -> {
             numberProcessor.findSecondMax(new int[]{});
         }, "Empty array!");
+    }
+
+    @Test
+    public void userGetsExceptionIfArrayIsNull() {
+        assertThrows(IllegalArgumentException.class, () -> numberProcessor.findSecondMax(null));
     }
 }

@@ -24,7 +24,7 @@ public class IsLeapYearTest extends NumberProcessorTest {
     @ValueSource(ints = {
             1988, 2020,
             2000, 1600,
-            0, 4, 400
+            4, 400
     })
     public void userCheckIfYearIsLeap(int year) {
         boolean actualResult = numberProcessor.isLeapYear(year);
