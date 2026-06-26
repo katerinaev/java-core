@@ -1,0 +1,38 @@
+package hw_12.task_1;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class EntityManager<T extends Entity> {
+    private final CopyOnWriteArrayList<T> entities = new CopyOnWriteArrayList<>();
+
+    public void add(T entity) {
+        entities.add(entity);
+    }
+
+    public boolean remove(T entity) {
+        return entities.remove(entity);
+    }
+
+    public List<T> getAll() {
+        return List.copyOf(entities);
+    }
+
+    public List<T>filterByAge(int min, int max) {
+        return entities.stream()
+                .filter(e -> e.getAge() >= min && e.getAge() <= max)
+                .toList();
+    }
+
+    public List<T> filterByName(String name) {
+        return entities.stream()
+                .filter(e -> e.getName().equals(name))
+                .toList();
+    }
+
+    public List<T> filterByActive(boolean isActive) {
+        return entities.stream()
+                .filter(e -> e.isActive() == isActive)
+                .toList();
+    }
+}
