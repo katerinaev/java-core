@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class EntityManager<T extends Entity> {
-    private CopyOnWriteArrayList<T> entities = new CopyOnWriteArrayList<>();
+    private final CopyOnWriteArrayList<T> entities = new CopyOnWriteArrayList<>();
 
     public void add(T entity) {
         entities.add(entity);

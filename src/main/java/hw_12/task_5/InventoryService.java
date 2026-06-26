@@ -26,15 +26,11 @@ public class InventoryService {
                 k -> new ArrayList<>()).add(product);
     }
 
-    public synchronized List<Product> getProductsByCategory(String category) {
-        return inventory.values()
-                .stream()
-                .flatMap(List :: stream)
-                .filter(p -> p.getCategory().equals(category))
-                .collect(Collectors.toList());
+    public List<Product> getProductsByCategory(String category) {
+        return new ArrayList<>(inventory.getOrDefault(category, List.of()));
     }
 
-    public Product getProductByCategory(String category) {
+    public synchronized Product getProductByCategory(String category) {
         List<Product> products = inventory.get(category);
         if (products == null || products.isEmpty()) {
             throw new OutOfStockException("There are no products in \"" + category + "\" category");

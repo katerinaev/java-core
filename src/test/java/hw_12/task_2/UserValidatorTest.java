@@ -1,5 +1,6 @@
 package hw_12.task_2;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -23,6 +24,11 @@ public class UserValidatorTest {
     - invalid email: "Tom", 55, "invalid-email" -> InvalidUserException, message - "Invalid email"
      */
     private UserValidator validator = new UserValidator();
+
+    @BeforeEach
+    void enableValidation() {
+        UserValidator.validationEnabled = true;
+    }
 
     @Test
     void testValidUser() {
@@ -72,7 +78,7 @@ public class UserValidatorTest {
 
     @Test
     void testValidationDisabled() {
-        validator.validationEnabled = false;
+        UserValidator.validationEnabled = false;
         User user = new User("marina", 118, "marinagmail.com");
         assertDoesNotThrow(() -> validator.validate(user));
     }

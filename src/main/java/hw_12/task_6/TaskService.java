@@ -23,19 +23,19 @@ public class TaskService<T> {
         return tasks.removeIf(t -> t.getId().equals(id));
     }
 
-    public List<Task<T>> findByStatus(Status status) {
+    public synchronized List<Task<T>> findByStatus(Status status) {
         return tasks.stream()
                 .filter(t -> t.getStatus().equals(status))
                 .collect(Collectors.toList());
     }
 
-    public List<Task<T>> findByPriority(Priority priority) {
+    public synchronized List<Task<T>> findByPriority(Priority priority) {
         return tasks.stream()
                 .filter(t -> t.getPriority().equals(priority))
                 .collect(Collectors.toList());
     }
 
-    public List<Task<T>> sortByDate() {
+    public synchronized List<Task<T>> sortByDate() {
         return tasks.stream()
                 .sorted(
                         Comparator.comparing(Task<T>::getDate)

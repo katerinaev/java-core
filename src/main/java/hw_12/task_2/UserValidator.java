@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 import static java.lang.Character.isUpperCase;
 
 public class UserValidator {
-    boolean validationEnabled = true;
+    public static boolean validationEnabled = true;
 
     static final String REGEX_EMAIL = "^[\\w-\\.]+@[\\w-]+(\\.[\\w-]+)*\\.[a-z]{2,}$";
 
