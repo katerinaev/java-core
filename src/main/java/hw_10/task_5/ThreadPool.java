@@ -25,6 +25,7 @@ public class ThreadPool {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     System.out.println(Thread.currentThread().getName() + " was interrupted");
+                    Thread.currentThread().interrupt();
                 }
             });
         }

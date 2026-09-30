@@ -12,6 +12,7 @@ public class TwoThreads {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
                     System.out.println("Thread A was interrupted");
+                    Thread.currentThread().interrupt();
                 }
             }
         });

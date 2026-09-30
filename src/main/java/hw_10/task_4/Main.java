@@ -6,7 +6,7 @@ public class Main {
 
         Runnable task = () -> {
             for (int i = 0; i < 1000; i++) {
-                counter.increnent();
+                counter.increment();
             }
         };
 
